@@ -21,7 +21,7 @@
         </router-link>
 
         <template v-if="token">
-          <router-link class="item" to="/orders">Pedidos</router-link>
+          <router-link class="item" to="/orders">Reservas</router-link>
           <span class="ui item cart">
             <i class="shopping cart icon" @click="openCart"></i>
           </span>

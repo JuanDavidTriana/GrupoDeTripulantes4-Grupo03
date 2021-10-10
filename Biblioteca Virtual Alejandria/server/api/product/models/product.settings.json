@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Product"
+    "name": "Product",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -25,12 +26,21 @@
       "required": true,
       "pluginOptions": {}
     },
-    "price": {
-      "type": "decimal",
+    "year": {
+      "type": "integer",
       "required": true
     },
     "category": {
       "model": "category"
+    },
+    "autor": {
+      "type": "richtext"
+    },
+    "paginas": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
     }
   }
 }
