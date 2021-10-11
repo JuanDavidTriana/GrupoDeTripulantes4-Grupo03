@@ -5,7 +5,7 @@
         <router-link class="item" to="/">
           <img
             class="ui small image"
-            src="../assets/logo.png"
+            src="../assets/Logo-biblioteca-2.png"
             alt="Ecommerce"
           />
         </router-link>
@@ -21,7 +21,7 @@
         </router-link>
 
         <template v-if="token">
-          <router-link class="item" to="/orders">Reservas</router-link>
+          <router-link class="item" to="/orders">Pedidos</router-link>
           <span class="ui item cart">
             <i class="shopping cart icon" @click="openCart"></i>
           </span>
@@ -74,7 +74,9 @@ export default {
 
 <style lang="scss" scoped>
 .ui.menu.secondary {
-  background-image: url('../assets/header-img.jpg');
+  background-image: url('../assets/fondo-header.jpg');
+  background-size: cover;
+  margin-bottom: 0;
   .item {
     color: #ffffff;
     &:hover {
@@ -84,7 +86,7 @@ export default {
   .menu.left {
     width: 50%;
     .ui.image {
-      width: 120px;
+      width: 30%;
     }
   }
   .menu.right {
