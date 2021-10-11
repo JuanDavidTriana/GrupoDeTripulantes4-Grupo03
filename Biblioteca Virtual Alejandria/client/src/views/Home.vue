@@ -16,20 +16,26 @@
     </div>
 
    
-<div class="ui container servicios">
-  <h2>SERVICIOS</h2>
-  <div class="ui cards equal width grid">
-  <div class="card column">
-    <div class="content">
-      <div class="header"> <i class="search icon"></i>CONSULTAS</div>
-      <div class="description">
-        Verifica la disponibilidad del libro que necesitas
-      </div>
+  <div class="ui container servicios">
+    <h2>SERVICIOS</h2>
+    <div class="ui cards equal width grid">
+      <div class="card column">
+        <div class="content">
+          <div class="header"> 
+            <router-link to="/search" style="decorations: none;"> 
+              <i class="search icon" ></i>CONSULTAS
+            </router-link>
+          </div>
+          <div class="description">
+            Verifica la disponibilidad del libro que necesitas
+          </div>
+        </div>
     </div>
-  </div>
   <div class="card column">
     <div class="content">
-      <div class="header"><i class="book icon"></i> PRÉSTAMOS</div>
+      <div class="header">
+        <router-link to="/reservations"><i class="book icon"></i> PRÉSTAMOS </router-link>
+        </div>
       <div class="description">
         Gestiona reservas y devoluciones de libros
       </div>
@@ -37,7 +43,11 @@
   </div>
   <div class="card column">
     <div class="content">
-      <div class="header"><i class="clipboard list icon"></i> HISTORIAL</div>
+      <div class="header">
+        <router-link to="/history">
+        <i class="clipboard list icon"></i> HISTORIAL
+        </router-link>
+        </div>
       <div class="description">
         Visualiza el registro de tus préstamos
       </div>
