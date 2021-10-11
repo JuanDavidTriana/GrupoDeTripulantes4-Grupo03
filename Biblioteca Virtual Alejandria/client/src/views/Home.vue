@@ -14,7 +14,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
     <div class="fondo-serv">
       <div class="ui container servicios">
         <h2>SERVICIOS</h2>
@@ -49,71 +48,6 @@
             </div>
           </div>
         </div>
-=======
-   
-  <div class="ui container servicios">
-    <h2>SERVICIOS</h2>
-    <div class="ui cards equal width grid">
-      <div class="card column">
-        <div class="content">
-          <div class="header"> 
-            <router-link to="/search" style="decorations: none;"> 
-              <i class="search icon" ></i>CONSULTAS
-            </router-link>
-          </div>
-          <div class="description">
-            Verifica la disponibilidad del libro que necesitas
-          </div>
-        </div>
-    </div>
-  <div class="card column">
-    <div class="content">
-      <div class="header">
-        <router-link to="/reservations"><i class="book icon"></i> PRÉSTAMOS </router-link>
-        </div>
-      <div class="description">
-        Gestiona reservas y devoluciones de libros
-      </div>
-    </div>
-  </div>
-  <div class="card column">
-    <div class="content">
-      <div class="header">
-        <router-link to="/history">
-        <i class="clipboard list icon"></i> HISTORIAL
-        </router-link>
-        </div>
-      <div class="description">
-        Visualiza el registro de tus préstamos
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
- 
-<div class="equipo">
-<div class="ui equal width center aligned padded grid">
-  <div class="center aligned two column row">
-  <div class="grey column ">
-    <h2>NUESTRO EQUIPO</h2>
-  </div>
-  <div class="eight wide column centered middle aligned">
-     <div class="ui three doubling cards ">
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
-    </div>
-    <div class="content">
-        <a class="header">Fabian Bustamante</a>
-      </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar/large/steve.jpg">
-    </div>
-    <div class="content">
-        <a class="header">Jose Arroyave</a>
->>>>>>> f1b4fac2b3676594dc148bbbb84bd6b17f7a5d33
       </div>
     </div>
 
@@ -145,9 +79,7 @@
 
               <div class="card">
                 <div class="image">
-                  <img
-                    src="https://semantic-ui.com/images/avatar/large/steve.jpg"
-                  />
+                  <img src="../assets/Jose.jpg" />
                 </div>
                 <div class="content">
                   <a class="header">Jose Arroyave</a>
