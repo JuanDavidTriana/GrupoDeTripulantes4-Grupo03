@@ -25,3 +25,18 @@ export async function getProductsCategory(category) {
     return null;
   }
 }
+
+export async function getProductsByName(name){
+  try {
+    const response = await fetch (
+      `${API_URL}/products?_where[name]=${name}`
+    );
+    const result = await response.json();
+    return result
+    
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+
+}

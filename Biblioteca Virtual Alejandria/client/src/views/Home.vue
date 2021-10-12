@@ -45,7 +45,7 @@
     <div class="content">
       <div class="header">
         <router-link to="/history">
-        <i class="clipboard list icon"></i> HISTORIAL
+        <i class="clipboard list icon"></i> <span style="text-color: black;"> HISTORIAL </span>
         </router-link>
         </div>
       <div class="description">
