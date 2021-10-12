@@ -106,7 +106,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoed>
+<style lang="scss" scoped>
 .register {
   text-align: center;
   h2 {

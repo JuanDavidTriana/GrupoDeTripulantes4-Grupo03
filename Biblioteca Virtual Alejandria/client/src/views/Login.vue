@@ -96,7 +96,7 @@ export default {
 <style lang="scss" scoped>
 .login {
   text-align: center;
-  > h2 {
+  h2 {
     margin: 50px 0 30px 0;
   }
   .ui.form {

@@ -1,42 +1,44 @@
 <template>
   <BasicLayouts>
-    <h1>Carrito</h1>
-    <table class="ui celled table" v-if="products">
-      <thead>
-        <tr>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="product in products" :key="product.id">
-          <td>{{ product.name }}</td>
-          <td>{{ product.quantity }}</td>
-          <td>$ {{ product.price }}</td>
-          <td style="text-align: center">
-            <i class="close icon" @click="deleteAllProductCart(product.id)"></i>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Total:</td>
-          <td colspan="2">$ {{ getTotal() }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="ui container pedidos">
+      <h1>Resumen del Pedido</h1>
+      <table class="ui celled table" v-if="products">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in products" :key="product.id">
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>$ {{ product.price }}</td>
+            <td style="text-align: center">
+              <i class="close icon" @click="deleteAllProductCart(product.id)"></i>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Total:</td>
+            <td colspan="2">$ {{ getTotal() }}</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <button class="ui button primary fluid">
-      Generar pedido
-    </button>
+      <button class="ui button primary fluid">
+        Generar pedido
+      </button>
 
-    <h3 v-if="!products">No tienes productos en el carrito</h3>
+      <h3 v-if="!products">No tienes productos en el carrito</h3>
+    </div>
   </BasicLayouts>
 </template>
 
 <script>
-import { watchEffect, ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 import BasicLayouts from '../layouts/BasicLayouts.vue';
 import { getProductsCartApi, deleteAllProductCartApi } from '../api/cart';
 
@@ -77,5 +79,9 @@ export default {
 };
 </script>
 
-<style></style>
-$
+<style lang="scss" scoped>
+.pedidos{
+  margin-top: 50px;
+}
+
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="cart-footer">
-    <p>Total: {{ total }}</p>
+    <p>Total: $ {{ total }}</p>
 
     <router-link to="/cart">
       <button class="ui button primary fluit btn-buy" @click="closeCart">

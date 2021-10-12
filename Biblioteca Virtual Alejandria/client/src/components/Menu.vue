@@ -4,9 +4,9 @@
       <div class="left menu">
         <router-link class="item" to="/">
           <img
-            class="ui small image"
+            class="ui medium image"
             src="../assets/Logo-biblioteca-2.png"
-            alt="Ecommerce"
+            alt="Logo"
           />
         </router-link>
         <template v-for="category in categories" :key="category.id">
@@ -85,9 +85,6 @@ export default {
   }
   .menu.left {
     width: 50%;
-    .ui.image {
-      width: 35%;
-    }
   }
   .menu.right {
     width: 50%;

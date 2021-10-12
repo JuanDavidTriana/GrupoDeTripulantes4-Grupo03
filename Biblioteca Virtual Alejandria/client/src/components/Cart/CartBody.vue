@@ -9,7 +9,7 @@
       <div class="info">
         <p>{{ product.name }}</p>
         <div class="price">
-          <p>{{ product.price }} $</p>
+          <p> $ {{ product.price }} $</p>
 
           <div class="quantity">
             <button
@@ -35,14 +35,31 @@
 </template>
 
 <script>
+import { addProductCartApi, deleteProductCartApi } from '../../api/cart';
 import { API_URL } from '../../utils/constants';
 export default {
   name: 'CartBody',
   props: {
     products: Array,
+    realoadCartFn: Function,
   },
-  setup() {
-    return { API_URL };
+  setup(props) {
+
+    const increaseProductCart = (id) => {
+      addProductCartApi(id);
+      props.realoadCartFn();
+    };
+
+    const decreaseProductCart = (id) => {
+      deleteProductCartApi(id);
+      props.realoadCartFn();
+    };
+
+    return {
+      API_URL,
+      increaseProductCart,
+      decreaseProductCart,
+    };
   },
 };
 </script>

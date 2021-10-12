@@ -1,12 +1,14 @@
 <template>
   <BasicLayouts>
-    <div class="ui grid">
-      <div
-        class="sixten wide mobile eight wide tablet four wide computer column"
-        v-for="product in products"
-        :key="product.id"
-      >
-        <Product :product="product" />
+    <div class="ui container categorias">
+      <div class="ui grid">
+        <div
+          class="sixten wide mobile eight wide tablet four wide computer column"
+          v-for="product in products"
+          :key="product.id"
+        >
+          <Product :product="product" />
+        </div>
       </div>
     </div>
   </BasicLayouts>
@@ -52,3 +54,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.categorias{
+  margin-top: 50px;
+}
+
+</style>

@@ -1,16 +1,16 @@
 <template>
   <BasicLayouts>
     <Banner> </Banner>
-    <div class="ui container center aligned libros ">
+    <div class="ui container libros">
       <h1>Libros más buscados</h1>
-    </div>
-    <div class="ui grid">
-      <div
-        class="sixten wide mobile eight wide tablet four wide computer column"
-        v-for="product in products"
-        :key="product.id"
-      >
-        <Product :product="product" />
+      <div class="ui grid">
+        <div
+          class="sixten wide mobile eight wide tablet four wide computer column"
+          v-for="product in products"
+          :key="product.id"
+        >
+          <Product :product="product" />
+        </div>
       </div>
     </div>
 
@@ -152,7 +152,7 @@ export default {
     let products = ref(null);
 
     onMounted(async () => {
-      const response = await getProducts(20);
+      const response = await getProducts(8);
       products.value = response;
     });
 
@@ -165,8 +165,11 @@ export default {
 
 <style lang="scss" scoped>
 .libros {
-  padding: 40px 0;
   margin: 20px 0;
+  h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
 }
 .servicios {
   margin-top: 50px;

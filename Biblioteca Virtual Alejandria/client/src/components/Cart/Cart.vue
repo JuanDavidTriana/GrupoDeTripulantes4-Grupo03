@@ -3,18 +3,18 @@
   <div class="cart" :class="{ open: showCart }">
     <div>
       <CartHeader :closeCart="closeCart" />
-      <CartBody :products="products" />
+      <CartBody :products="products" :realoadCartFn="realoadCartFn" />
     </div>
-    <CartoFooter :products="products" :closeCart="closeCart" v-if="products" />
+    <CartFooter :products="products" :realoadCartFn="realoadCartFn" v-if="products" />
   </div>
 </template>
 
 <script>
-import { ref, computed, watchEffect } from 'vue';
+import { ref, computed, watchEffect, watch  } from 'vue';
 import { useStore } from 'vuex';
 import CartHeader from './CartHeader.vue';
 import CartBody from './CartBody.vue';
-import CartoFooter from './CartFooter.vue';
+import CartFooter from './CartFooter.vue';
 import { getProductsCartApi } from '../../api/cart';
 
 export default {
@@ -22,12 +22,13 @@ export default {
   components: {
     CartHeader,
     CartBody,
-    CartoFooter,
+    CartFooter,
   },
   setup() {
     const store = useStore();
     const showCart = computed(() => store.state.showCart);
     let products = ref(null);
+    let realoadCart = ref(false);
 
     const getProductsCart = async () => {
       const response = await getProductsCartApi();
@@ -36,6 +37,7 @@ export default {
 
     watchEffect(() => {
       showCart.value;
+      realoadCart.value;
       getProductsCart();
     });
 
@@ -43,10 +45,15 @@ export default {
       store.commit('setShowCart', false);
     };
 
+    const realoadCartFn = () => {
+      realoadCart.value = !realoadCart.value;
+    };
+
     return {
       showCart,
       closeCart,
       products,
+      realoadCartFn,
     };
   },
 };
@@ -68,6 +75,7 @@ export default {
 }
 
 .cart {
+  z-index: 9999;
   position: fixed;
   right: 0;
   top: 0;

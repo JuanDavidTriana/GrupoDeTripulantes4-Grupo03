@@ -55,5 +55,8 @@ export default {
     justify-content: center;
     transition: min-height 0.6s ease;
   }
+.content{
+min-height: 200px;
+  }
 }
 </style>
